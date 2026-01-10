@@ -142,10 +142,11 @@ prometheus-observability-stack/
 ## Phase 1: Infrastructure Provisioning
 ### Step 1: Clone the Repository
 ```
-git clone https://github.com/ObservabilityStack-Prometheus-grafana.git
-cd ObservabilityStack-Prometheus-grafana
+git clone https://github.com/Yaminiiii7/Production-Ready-Observability-Stack-on-AWS-with-Prometheus-Grafana.git
+cd Production-Ready-Observability-Stack-on-AWS-with-Prometheus-Grafana
 ```
-### Step 2: Get VPC id and subnet id from AWS console and replace in ec2.tfvars. Also replace owner and key_name
+### Step 2: Edit the terraform file
+Get VPC id and subnet id from AWS console and replace in ec2.tfvars. Also replace owner and key_name
 
 ### Step 3: 
 ```
