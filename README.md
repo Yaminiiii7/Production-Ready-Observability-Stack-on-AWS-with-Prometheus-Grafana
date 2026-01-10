@@ -1,4 +1,4 @@
-# 🚀 Prometheus Observability Stack on AWS
+# 🚀 Observability Stack on AWS
 
 
 ** Table of Contents**
