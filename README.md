@@ -215,6 +215,8 @@ Access URLs
 1. Open Prometheus UI:
    `http://YOUR-EC2-IP:9090`
 
+   <img src='pictures/Prometheus.PNG'>
+
 2. Check Targets:
    - Go to Status → Targets
    - Should see Host job with endpoint `YOUR-EC2-IP:9100`
@@ -252,6 +254,8 @@ rate(node_network_receive_bytes_total[5m])
    - Password: admin
    - Change password when prompted
 
+   <img src='pictures/Grafana.PNG'>
+
 2. Add Prometheus Data Source:
 
    Connections → Data Sources → Add data source → Prometheus
@@ -266,6 +270,7 @@ rate(node_network_receive_bytes_total[5m])
 
    - Select Prometheus data source → Import
 
+
 4. View Dashboard:
    - You should now see comprehensive system metrics:
      - CPU usage per core
@@ -274,6 +279,10 @@ rate(node_network_receive_bytes_total[5m])
      - Network traffic
      - System load
      - Uptime
+
+   <img src='pictures/dashboard.PNG'>
+
+
    
 ## Step 3: Configure Alert Manager
 
@@ -328,6 +337,7 @@ openssl speed -multi $(nproc --all) &
 # Stop the test
 killall openssl
 ```
+<img src='pictures/CPUfiring.PNG'>
 
 ## Test 2: High Storage Alert
 
@@ -341,6 +351,15 @@ dd if=/dev/zero of=testfile_16GB bs=1M count=16384
 # Clean up
 rm testfile_16GB
 ```
+<img src='pictures/storageFiring.PNG'>
+
+<img src='pictures/observabilitySlackChannel.PNG'>
+
+<img src='pictures/alerts.PNG'>
+
+
+
+
 
 ### Test 3: Instance Down Alert
 
@@ -354,6 +373,7 @@ sudo docker stop node-exportporter
 # Restart node exporter
 sudo docker start node-exporter
 ```
+<img src='pictures/testdown.PNG'>
 ---
 
 By completing this project, you've learned:
